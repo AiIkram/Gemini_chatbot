@@ -2,7 +2,7 @@ import time
 import os
 import joblib
 import streamlit as st
-#pip install google.generativeai
+
 import google.generativeai as genai
 
 
@@ -17,7 +17,6 @@ AI_AVATAR_ICON = '✨'
 try:
     os.mkdir('data/')
 except:
-    # data/ folder already exists
     pass
 
 # Load past chats (if available)
@@ -46,7 +45,6 @@ with st.sidebar:
             placeholder='_',
         )
     # Save new chats after a message has been sent to AI
-    # TODO: Give user a chance to name chat
     st.session_state.chat_title = f'ChatSession-{st.session_state.chat_id}'
 
 st.write('# Chat with Gemini')
@@ -109,7 +107,7 @@ if prompt := st.chat_input('Your message here...'):
         # Streams in a chunk at a time
         for chunk in response:
             # Simulate stream of chunk
-            # TODO: Chunk missing `text` if API stops mid-stream ("safety"?)
+            #Chunk missing `text` if API stops mid-stream ("safety"?)
             for ch in chunk.text.split(' '):
                 full_response += ch + ' '
                 time.sleep(0.05)
