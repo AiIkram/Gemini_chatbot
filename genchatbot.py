@@ -11,7 +11,7 @@ genai.configure(api_key='AIzaSyDNEpqEmUSvrNTlInqGx_JEw7FC5uCHk58')
 
 new_chat_id = f'{time.time()}'
 MODEL_ROLE = 'ai'
-AI_AVATAR_ICON = '✨'
+AI_AVATAR_ICON = '💎'
 
 # Create a data/ folder if it doesn't already exist
 try:
