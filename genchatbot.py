@@ -6,7 +6,7 @@ import streamlit as st
 import google.generativeai as genai
 
 
-genai.configure(api_key='AIzaSyDNEpqEmUSvrNTlInqGx_JEw7FC5uCHk58') 
+genai.configure(api_key='AIzaSyDvCsUBhwH_iqNjIynaefIY3OCSvMejxSI') 
 
 
 new_chat_id = f'{time.time()}'
